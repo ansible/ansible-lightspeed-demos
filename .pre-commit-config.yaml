@@ -1,0 +1,10 @@
+---
+repos:
+  - repo: https://github.com/ansible-community/ansible-lint.git
+    rev: v6.22.1
+    hooks:
+      - id: ansible-lint
+  - repo: https://github.com/igorshubovych/markdownlint-cli.git
+    rev: v0.37.0
+    hooks:
+      - id: markdownlint

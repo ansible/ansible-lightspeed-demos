@@ -1,9 +1,0 @@
----
-ec2_instance:
-  name: lightspeed-instance-01
-  key_name: lightspeed-keypair
-  image_id: ami-016eb5d644c333ccb # RHEL 9 us-east-1
-  wait: true
-  tags:
-    function: lightspeed-demo
-  security_group: secgroup-lightspeed

@@ -25,7 +25,7 @@
             run: sudo pip3 install pre-commit ansible
     
           - name: Install ansible requirements
-            run: ansible-galaxy collection install -r /home/runner/work/ansible-lightspeed-demos/ansible-lightspeed-demos/tests/requirements.yml
+            run: ansible-galaxy collection install -r ${{ github.workspace }}/tests/requirements.yml
     
           - name: Run pre-commit tests
             run: pre-commit run -v --all-files

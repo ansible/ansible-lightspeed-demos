@@ -1,4 +1,4 @@
-# Ansible Lightspeed technical preview demo content
+# Ansible Lightspeed demo content
 
 Compilation of Ansible Lightspeed demo content and examples.
 
@@ -12,7 +12,6 @@ Please refer to the `README.md` for each demo in the corresponding demo root fol
 |                    | [Install and configure Cockpit](./playbooks/infra/install_cockpit/README.md)                                   | Working    |
 | **Cloud**          | [Provision an AWS EC2 instance](./playbooks/cloud/aws/README.md)                                               | Working    |
 |                    | [Provision Azure resources and VM](./playbooks/cloud/azure/README.md)                                          | Working    |
-
 
 ## Demo content folder structure
 
@@ -44,7 +43,11 @@ Please follow the instructions provided by the resources available in the [getti
 
 The model continues to improve and evolve with each release. This can result in generated suggestions that differ from the examples provided.
 
-Tested Ansible Playbooks are available for each corresponding demo Playbook and start with the `solution_*.yml` prefix. For example, `solution_provision_azure_vm.yml`.  
+Tested Ansible Playbooks are available for each corresponding demo Playbook thats starts with the `solution_*.yml` prefix. For example, `solution_provision_azure_vm.yml`.  
 Please use this to compare your generated suggestions before doing the demo.
+
+## How can I contribute?
+
+Please refer to the [Contributing](./docs/contributing.md) guide for more information.
 
 ---

@@ -11,3 +11,4 @@ collections:
   - name: openstack.cloud
   - name: kubernetes.core
   - name: google.cloud
+  - name: containers.podman

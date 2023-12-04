@@ -6,18 +6,17 @@ We treat Ansible Lightspeed demos just like we treat the Ansible Project.  Pleas
 
 - [Contribute](#contribute)
   - [Table of Contents](#table-of-contents)
-- [Pull Requests](#pull-requests)
-  - [Create a fork!](#create-a-fork)
+  - [Pull Requests](#pull-requests)
+  - [Create a fork](#create-a-fork)
   - [Stay in Sync](#stay-in-sync)
     - [Configuring Your Remotes](#configuring-your-remotes)
     - [Rebasing Your Branch](#rebasing-your-branch)
     - [Updating your Pull Request](#updating-your-pull-request)
   - [Create a pull requests](#create-a-pull-requests)
-- [Going Further](#going-further)
-- [Getting Help](#getting-help)
+  - [Going Further](#going-further)
+  - [Getting Help](#getting-help)
 
-
-# Pull Requests
+## Pull Requests
 
 We take pull requests!  What is a pull request?
 
@@ -25,7 +24,7 @@ We take pull requests!  What is a pull request?
 
 More info on PRs: [https://help.github.com/en/articles/about-pull-requests](https://help.github.com/en/articles/about-pull-requests)
 
-## Create a fork!
+## Create a fork
 
 Create a fork on your own Github project (or your personal space)
 
@@ -33,7 +32,7 @@ Create a fork on your own Github project (or your personal space)
 
 ## Stay in Sync
 
-It is important to know how to keep your fork in sync with the upstream Workshops project.
+It is important to know how to keep your fork in sync with the upstream Ansible Lightspeed Demos project.
 
 ### Configuring Your Remotes
 
@@ -72,20 +71,17 @@ More info on docs.ansible.com: [Rebasing a Pull Request](http://docs.ansible.com
 Make sure you are not behind (in sync) and then submit a PR to the Ansible Workshops.  
 [Read the Pull Request Documentation on Github.com](https://help.github.com/articles/creating-a-pull-request/)
 
-Just because you submit a PR, doesn't mean that it will get accepted.  Right now the QA process is manual, so provide detailed directions on
-
- - WHY? Why did you make the change?
- - WHO? Who is this for?  If this is something for a limited audience it might not make sense for all users.
- - BEST PRACTICE?  Is this the "best" way to do this?  Link to documentation or examples where the way you solved your issue or improved the Ansible Workshops is the best practice for teaching or building workshops.
+Just because you submit a PR, doesn't mean that it will get accepted.  Right now the QA process is manual, so please provide details.
 
 Being more descriptive is better, and has a higher change of getting merged upstream.  Communication is key!  Just b/c the PR doesn't get accepted right away doesn't mean it is not a good idea. We have to balance many different types of users.  Thank you for contributing!
 
-# Going Further
+## Going Further
 
 The following links will be helpful if you want to contribute code to the Ansible Lightspeed demos project, or any Ansible project:
+
 - [Ansible Committer Guidelines](http://docs.ansible.com/ansible/latest/committer_guidelines.html)
 - [Learning Git](https://git-scm.com/book/en/v2)
 
-# Getting Help
+## Getting Help
 
 Please [file issues on Github](https://github.com/ansible/ansible-lightspeed-demos/issues).  Please be descriptive and fill out all required information.

@@ -41,8 +41,6 @@ An example Azure inventory is available in the [inventory](./inventory/) folder.
 
 [./playbooks/cloud/azure/solutions/solution_provision_azure_vm.yml](./solution_provision_azure_vm.yml)
 
-## Running the demo
-
 Run the steps below in the initial [./playbooks/cloud/azure/demo_provision_azure_vm.yml](./demo_provision_azure_vm.yml) example Ansible Playbook.
 
 ### Step 1

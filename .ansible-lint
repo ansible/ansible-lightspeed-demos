@@ -1,7 +1,7 @@
 ---
 profile: production
 quiet: false
-verbosity: 0
+verbosity: 3
 
 skip_list:
   - ignore-errors

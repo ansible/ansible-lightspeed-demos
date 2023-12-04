@@ -1,31 +1,31 @@
 ---
-    name: Validation CI
-    
-    "on":
-      push:
-        branches: "*"
-      pull_request:
-        types:
-          - assigned
-          - opened
-          - edited
-          - reopened
-          - synchronize
-          - ready_for_review
-          - review_requested
-    
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout
-            uses: actions/checkout@v3
-    
-          - name: Install packages
-            run: sudo pip3 install pre-commit ansible
-    
-          - name: Install ansible requirements
-            run: ansible-galaxy collection install -r ${{ github.workspace }}/tests/requirements.yml
-    
-          - name: Run pre-commit tests
-            run: pre-commit run -v --all-files
+name: Validation CI
+
+"on":
+  push:
+    branches: "*"
+  pull_request:
+    types:
+      - assigned
+      - opened
+      - edited
+      - reopened
+      - synchronize
+      - ready_for_review
+      - review_requested
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install packages
+        run: sudo pip3 install pre-commit ansible-core
+
+      - name: Install ansible requirements
+        run: ansible-galaxy collection install -r ${{ github.workspace }}/tests/requirements.yml
+
+      - name: Run pre-commit tests
+        run: pre-commit run -v --all-files

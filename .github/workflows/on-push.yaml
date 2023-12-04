@@ -22,7 +22,7 @@
             uses: actions/checkout@v3
     
           - name: Install packages
-            run: sudo pip3 install pre-commit ansible
+            run: sudo pip3 install pre-commit ansible-core
     
           - name: Install ansible requirements
             run: ansible-galaxy collection install -r ${{ github.workspace }}/tests/requirements.yml

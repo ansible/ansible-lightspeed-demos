@@ -8,39 +8,48 @@
     group/aws:
       region: us-east-1
 
-  # vars:
-  #   ec2_instance:
-  #     name: lightspeed-instance-01
-  #     key_name: lightspeed-keypair
-  #     image_id: ami-016eb5d644c333ccb # RHEL 9 us-east-1
-  #     tags:
-  #       function: lightspeed-demo
-  #     security_group: secgroup-lightspeed
+  vars:
+    ec2_instance:
+      name: instance-lightspeed-01
+      key_name: lightspeed-keypair
+      image_id: ami-016eb5d644c333ccb # RHEL 9 us-east-1
+      network:
+        assign_public_ip: true
+      tags:
+        function: demo-lightspeed
+      security_group: secgroup-lightspeed
 
   tasks:
-        # TASK 1
-        # # 1a. Uncomment task description below and generate a task suggestion.
-        # #     Note - Best practices: The suggestion used the Fully Qualified Collection name.
-        # #     Note - Context: Ansible Lightspeed used the Playbook name "EC2 Cloud Operations" to use the correct "amazon.aws.ec2_vpc_subnet_info" module.
+    # Gather info from subnet called subnet-lightspeed & create vpc_subnet_id var
+    - name: Gather info from subnet called subnet-lightspeed
+      amazon.aws.ec2_vpc_subnet_info:
+        filters:
+          tag:Name: subnet-lightspeed
+      register: subnet_info
 
-    # - name: Gather subnet info tag:Name subnet-lightspeed
+    - name: Create vpc_subnet_id var
+      ansible.builtin.set_fact:
+        vpc_subnet_id: "{{ subnet_info.subnets[0].id }}"
 
-        # TASK 2
-        # # 2a. Uncomment task description below and generate a task suggestion.
-        # #     Note - Context: The suggestion included the previous task's registered variable in the suggestion.
-        # #     Note - Accuracy: The suggestion provides the correct key value from the previously task's registered variable.
+    - name: Provision t3.small instance using ec2_instance var
+      amazon.aws.ec2_instance:
+        name: "{{ ec2_instance.name }}"
+        key_name: "{{ ec2_instance.key_name }}"
+        image_id: "{{ ec2_instance.image_id }}"
+        network: "{{ ec2_instance.network }}"
+        instance_type: t3.small
+        vpc_subnet_id: "{{ vpc_subnet_id }}"
+        tags: "{{ ec2_instance.tags }}"
+        security_group: "{{ ec2_instance.security_group }}"
+        wait: true
+        wait_timeout: 600
+      register: ec2_instance_info
 
-    # - name: Create vpc_subnet_id var
+    # Create var from public_ip_address & print it out
+    - name: Create var from public_ip_address
+      ansible.builtin.set_fact:
+        public_ip_address: "{{ ec2_instance_info.instances[0].public_ip_address }}"
 
-        # TASK 3
-        # # 3a. Uncomment task description "Provision t3.micro instance" below and generate a task suggestion.
-        # #     Note - Efficiency: The suggestion provides practical variable examples to improve efficiency.
-
-    # - name: Provision t3.micro instance
-
-        # # 3b. Remove the above task and suggestion.
-        # #     Uncomment 2nd task description "Provision t3.micro instance using ec2_instance var".
-        # #     Generate an updated suggestion.
-        # #     Note - Context: The updated suggestion includes the "ec2_instance variable fields in the suggestion"
-
-    # - name: Provision t3.micro instance using ec2_instance var
+    - name: Print it out
+      ansible.builtin.debug:
+        msg: "{{ public_ip_address }}"

@@ -1,9 +1,11 @@
 ---
 profile: production
 quiet: false
-verbosity: 3
+verbosity: 0
 
 skip_list:
   - ignore-errors
   - galaxy[no-changelog]
   - yaml[line-length]
+
+offline: true

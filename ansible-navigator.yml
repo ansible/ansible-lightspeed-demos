@@ -1,6 +1,17 @@
 ---
 ansible-navigator:
   execution-environment:
+    environment-variables:
+      pass:
+        - _SANDBOX_ID
+        - ANSIBLE_PRIVATE_KEY_FILE
+        - AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY
+        - AWS_SESSION_TOKEN
+        - AZURE_SECRET
+        - AZURE_SUBSCRIPTION_ID
+        - AZURE_CLIENT_ID
+        - AZURE_TENANT
     enabled: true
     container-engine: auto
     pull:

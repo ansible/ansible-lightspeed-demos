@@ -1,5 +1,7 @@
 # Provision an AWS EC2 instance using Ansible Lightspeed
 
+![](../../../assets/img/lightspeed_provision_aws_instance.gif)
+
 ## Configure and activate Ansible Lightspeed
 
 Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../getting_started.md).

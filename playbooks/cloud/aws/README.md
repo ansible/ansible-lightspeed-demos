@@ -1,5 +1,7 @@
 # Provision an AWS EC2 instance using Ansible Lightspeed
 
+![](../../../assets/img/lightspeed_provision_aws_instance.gif)
+
 ## Configure and activate Ansible Lightspeed
 
 Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../getting_started.md).
@@ -41,44 +43,25 @@ Run the steps below in the [./playbooks/cloud/aws/demo_provision_aws_instance.ym
 
 ### Step 1
 
-#### Uncomment and generate task `# - name: Gather subnet info tag:Name subnet-lightspeed`
+#### Generate multi-task `# Gather info from subnet called subnet-lightspeed & create vpc_subnet_id var`
 
 - Used natural language prompt to generate syntactically correct Ansible Playbook Task.
 - Suggestion incorporated Ansible best practices and used Fully Qualified Collection Name (FQCN).
-- Ansible Lightspeed used the Playbook name "EC2 Cloud Operations" to use the correct "amazon.aws.ec2_vpc_subnet_info" module.
+- The first task used the correct AWS tag "tag:Name" in the filter.
+- The second task used the correct variable created in the previous task.
 
 ### Step 2
 
-#### Uncomment and generate task `Create vpc_subnet_id var`
+#### Uncomment and generate task `- name: Provision t3.small instance using ec2_instance var`
 
-- Used the Playbook context to use AWS Ansible modules in the suggestion.
-- Used natural language to generate the `vpc_subnet_id` variable using the correct variable keys.
-- The suggestion provides the correct key value from the previously task's registered variable.
+- Used details specified in the prompt. For example, "t3.small"
+- The suggestion used the "ec2_instance" variable declared in the "vars:" section.
 
 ### Step 3
 
-#### Uncomment and generate task `- name: Gather subnet info tag:Name subnet-lightspeed`
+#### Generate multi-task `# Create var from public_ip_address & print it out`
 
-- Used `tag:Name subnet-lightspeed` in the prompt to use the correct AWS filter.
-
-### Step 4
-
-#### Uncomment and generate task `- name: Create vpc_subnet_id var`
-
-- Used `tag:Name subnet-lightspeed` in the prompt to use the correct AWS filter.
-
-### Step 5
-
-#### Uncomment and generate task `- name: Provision t3.micro instance`
-
-- Suggestion provides good variable examples for module arguments.
-
-### Step 6
-
-#### Uncomment the `vars` section at the top of the Playbook and remove the previous task
-
-#### Generate a new, updated  task with  `- name: Provision t3.micro instance using ec2_instance var`
-
-- Ansible Lightspeed used the updated natural language prompt and referenced the `ec2_instance` variable in the suggestion.
+- The suggestion used the correct variable from the previous task.
+- The second task used the "public_ip_address" variable based on the previous task.
 
 ---

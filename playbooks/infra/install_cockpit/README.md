@@ -2,18 +2,19 @@
 
 ## Overview
 
-This Playbook installs Cockpit, copies a custom configuration file, and starts the `cockpit` service.  
+This Playbook installs Cockpit using the `redhat.rhel_system_roles` Certified Content collection, copies a custom configuration file, and restarts the `cockpit` service.  
 
 The demo illustrates:
 
+* Generates single and multi-task suggestions
 * How Ansible Lightspeed uses the full Playbook context when generating a task.
-* Uses a generic task prompt to generate applicable, accurate Ansible code based on the existing Playbook content.
+* Uses a natural language task prompts to generate applicable, accurate Ansible code.
 
-![](../../../assets/img/lab_install_cockpit_solution_generate_playbook.gif)
+![](../../../assets/img/lightspeed_install_and_configure_cockpit.gif)
 
 ## Demo preparation
 
-1. Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../GETTING_STARTED.md).
+1. Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../docs/getting_started.md).
 2. If not running this example in the Ansible self-paced labs environment, create an Ansible Inventory file with a `rhel` Ansible inventory group with the corresponding Linux target host(s) details.
 
 * [Example Ansible inventory file](./inventory/inventory.yml)
@@ -42,10 +43,11 @@ Run the steps below in the [./playbooks/infra/install_cockpit/demo_install_cockp
 
 ### Step 1
 
-#### Uncomment and generate first task `- name: Install cockpit package`
+#### Uncomment and generate task `- name: Install cockpit using redhat.rhel_system_roles collection`
 
 * Used natural language prompt to generate syntactically correct Ansible Playbook task.
 * Suggestion incorporated Ansible best practices and used Fully Qualified Collection Name (FQCN).
+* Suggestion used the RHEL System Roles Certified Content Collection specified in the prompt.
 
 ### Step 2
 
@@ -56,32 +58,9 @@ Run the steps below in the [./playbooks/infra/install_cockpit/demo_install_cockp
 
 ### Step 3
 
-#### Uncomment and generate task `- name: Start and enable service`
+#### Generate multi-task `# Restart and enable service & wait 15 seconds for it to be available`
 
-* Ansible Lightspeed used the generic `Start and enable service` prompt and the full Playbook context to infer the user needed to start the `cockpit` service.
-
-### Step 4
-
-#### Uncomment and generate task `- name: Wait 15 seconds port 9090`
-
-* Ansible Lightspeed used the specific values requested in the prompt.
-
-### Step 5
-
-#### Uncomment the module_defaults section
-
-```yaml
-  module_defaults:
-    ansible.builtin.service:
-      enabled: true
-      state: started
-```
-
-### Step 6
-
-#### Clear current task and request updated suggestion for `- name: Start and enable service`
-
-* Ansible Lightspeed used the full Playbook context and included the `module_defaults` Playbook entry when generating a suggestion.
-* Note that the suggestion no longer includes `enabled: true` and `state: started` as it's already declared in the `module_defaults` section.
+* First task - Ansible Lightspeed used the generic "Restart and enable service" prompt and full Playbook context to infer the recommendation should restart the "cockpit" service.
+* Second task - Ansible Lightspeed used the generic language prompt and Playbook context and used the correct default Cockpit service port (9090) in the suggestion.
 
 ---

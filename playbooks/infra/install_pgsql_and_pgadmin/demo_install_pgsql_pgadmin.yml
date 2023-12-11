@@ -34,6 +34,7 @@
         # #     Task 3 note - The suggestion used the correct default PostgreSQL TCP port (5432).
 
     # Do initial postgresql config & start the service & allow the traffic through the firewall
+
         # TASK 3
         # # 1a. Uncomment task description below and generate a single task suggestion.
         # #     Note - The suggestion integrated the "pgadmin_container" var as requested in the prompt

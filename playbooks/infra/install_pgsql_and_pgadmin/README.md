@@ -2,6 +2,8 @@
 
 ## Overview
 
+![](../../../assets/img/lightspeed_install_pgsql_pgadmin.gif)
+
 The demo performs the following tasks:
 
 - Installs `postgresql-server`, initializes the database, and starts and enables the `postgresql` service.

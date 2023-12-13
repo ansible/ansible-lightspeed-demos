@@ -15,8 +15,6 @@ Tested Ansible content starts with the `solution_*.yml` prefix. For example, `so
 
 This demo provisions an AWS EC2 instance using pre-existing variables.
 
-![](../../../assets/img/lightspeed_provision_aws_instance.gif)
-
 ## Demo preparation
 
 1. Configure your AWS credential environment variables as outlined in the [Ansible AWS guide](https://docs.ansible.com/ansible/latest/collections/amazon/aws/docsite/guide_aws.html#authentication).

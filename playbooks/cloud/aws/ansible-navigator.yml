@@ -1,0 +1,25 @@
+---
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+        - ./inventory/
+  execution-environment:
+    enabled: true
+    container-engine: auto
+    pull:
+      policy: missing
+    image: "quay.io/acme_corp/lightspeed-101_ee:latest"
+    environment-variables:
+      pass:
+        - _SANDBOX_ID
+        - ANSIBLE_PRIVATE_KEY_FILE
+  playbook-artifact:
+    enable: true
+    save-as: "/tmp/{playbook_name}-artifact.json"
+    replay: "/tmp/replay-artifact.json"
+  logging:
+    level: critical
+  editor:
+    command: code -g {filename}:{line_number}
+    console: false

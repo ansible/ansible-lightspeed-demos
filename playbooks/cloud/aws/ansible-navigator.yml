@@ -1,5 +1,9 @@
 ---
 ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+        - ./inventory/
   execution-environment:
     enabled: true
     container-engine: auto

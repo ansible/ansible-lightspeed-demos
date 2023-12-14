@@ -38,7 +38,6 @@
       ansible.builtin.set_fact:
         vpc_subnet_id: "{{ subnet_info.subnets[0].id }}"
 
-
         # TASK 2
         # # 2a. Uncomment the single-task prompt
         # #     Note - The suggestion used the "ec2_instance" variable declared in the "vars:" section.

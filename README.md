@@ -6,12 +6,12 @@ Compilation of Ansible Lightspeed demo content and examples.
 
 Please refer to the `README.md` for each demo in the corresponding demo root folder for detailed demo instructions.
 
-| **Domain**         | **Name**                                                                                                                    | **Status** |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|------------|
-| **Infrastructure** | [Install and configure postgresql and pgadmin4 podman container](./playbooks/infra/install_pgsql_and_pgadmin/README.md)     | Working    |
-|                    | [Install and configure Cockpit](./playbooks/infra/install_cockpit/README.md)                                                | Working    |
-| **Cloud**          | [Provision an AWS EC2 instance](./playbooks/cloud/aws/README.md)                                                            | Working    |
-|                    | [Provision Azure resources and VM](./playbooks/cloud/azure/README.md)                                                       | Working    |
+| **Domain**         | **Name**                                                                                                                    | **Status**  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------|
+| **Infrastructure** | [Install and configure postgresql and pgadmin4 podman container](./playbooks/infra/install_pgsql_and_pgadmin/README.md)     | Working     |
+|                    | [Install and configure Cockpit](./playbooks/infra/install_cockpit/README.md)                                                | Working     |
+| **Cloud**          | [Provision an AWS EC2 instance](./playbooks/cloud/aws/README.md)                                                            | Working     |
+|                    | [Provision Azure resources and VM](./playbooks/cloud/azure/README.md)                                                       | In progress |
 
 ## Demo content folder structure
 

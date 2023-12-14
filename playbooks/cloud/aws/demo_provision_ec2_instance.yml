@@ -18,6 +18,7 @@
       tags:
         function: demo-lightspeed
       security_group: secgroup-lightspeed
+      wait: true
 
   tasks:
         # TASK 1

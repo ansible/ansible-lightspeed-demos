@@ -15,6 +15,7 @@ ansible-navigator:
         - _SANDBOX_ID
         - ANSIBLE_PRIVATE_KEY_FILE
         - AZURE_SECRET
+        - AZURE_AD_USER
         - AZURE_SUBSCRIPTION_ID
         - AZURE_CLIENT_ID
         - AZURE_TENANT
@@ -22,6 +23,8 @@ ansible-navigator:
         - INSTRUQT_AZURE_SUBSCRIPTION_AZUREADMIN_SPN_PASSWORD
         - INSTRUQT_AZURE_SUBSCRIPTION_AZUREADMIN_SUBSCRIPTION_ID
         - INSTRUQT_AZURE_SUBSCRIPTION_AZUREADMIN_TENANT_ID
+        - INSTRUQT_AZURE_SUBSCRIPTION_AZUREADMIN_USERNAME
+        - INSTRUQT_AZURE_SUBSCRIPTION_AZUREADMIN_PASSWORD
   playbook-artifact:
     enable: true
     save-as: "/tmp/{playbook_name}-artifact.json"

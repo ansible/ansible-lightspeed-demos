@@ -39,5 +39,7 @@
         # # 3a. Press "ENTER" at the end of the multi-task prompt.
         # #     Note - The suggestion used the correct variable from the previous task.
         # #     Note - The second task used the "public_ip_address" variable based on the previous task.
+        # #     First task note - The suggestion used the correct variable from the previous task and integrated "retries".
+        # #     Second task note - The suggestion used the "public_ip_address" variable based on the previous task.
 
-    # Create var from public_ip_address & print it out
+    # Create var from public_ip_address with retry & print it out

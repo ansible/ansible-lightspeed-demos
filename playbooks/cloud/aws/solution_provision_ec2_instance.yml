@@ -59,16 +59,16 @@
         # # 3a. Press "ENTER" at the end of the multi-task prompt.
         # #     Note - The suggestion used the correct variable from the previous task.
         # #     Note - The second task used the "public_ip_address" variable based on the previous task.
+        # #     First task note - The suggestion used the correct variable from the previous task and integrated "retries".
+        # #     Second task note - The suggestion used the "public_ip_address" variable based on the previous task.
 
-        # TASK 3
-        # # 3a. Press "ENTER" at the end of the multi-task prompt.
-        # #     Note - The suggestion used the correct variable from the previous task.
-        # #     Note - The second task used the "public_ip_address" variable based on the previous task.
-
-    # Create var from public_ip_address & print it out
-    - name: Create var from public_ip_address
+    # Create var from public_ip_address with retry & print it out
+    - name: Create var from public_ip_address with retry
       ansible.builtin.set_fact:
         public_ip_address: "{{ ec2_instance_info.instances[0].public_ip_address }}"
+      retries: 10
+      delay: 10
+      until: public_ip_address is defined
 
     - name: Print it out
       ansible.builtin.debug:

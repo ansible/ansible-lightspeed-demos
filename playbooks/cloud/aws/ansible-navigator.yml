@@ -14,6 +14,12 @@ ansible-navigator:
       pass:
         - _SANDBOX_ID
         - ANSIBLE_PRIVATE_KEY_FILE
+        - AWS_ACCESS_KEY_ID
+        - AWS_ACCOUNT_ID
+        - AWS_ACCOUNT_NAME
+        - AWS_ACCOUNT_PASSWORD
+        - AWS_ACCOUNT_USERNAME
+        - AWS_SECRET_ACCESS_KEY
   playbook-artifact:
     enable: true
     save-as: "/tmp/{playbook_name}-artifact.json"

@@ -57,9 +57,9 @@ Run the steps below in the [./playbooks/cloud/aws/demo_provision_aws_instance.ym
 
 ### Step 3
 
-#### Generate multi-task `# Create var from public_ip_address & print it out`
+#### Generate multi-task `# Create var from public_ip_address with retry & print it out`
 
-- The suggestion used the correct variable from the previous task.
+- The suggestion used the correct variable from the previous task and added the `retries` paramater.
 - The second task used the "public_ip_address" variable based on the previous task.
 
 ---

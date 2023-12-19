@@ -1,5 +1,7 @@
 # Provision Azure resources and virtual machine
 
+![](../../../assets/img/lightspeed_provision_azure_vm.gif)
+
 ## Configure and activate Ansible Lightspeed
 
 Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../getting_started.md).
@@ -16,8 +18,6 @@ This demo provisions multiple Azure resources, such as a resource group, network
 This demo is more advanced as it has several tasks and requires manual changes to some of the suggestions. However, it's a good example of how Ansible Lightspeed uses previous task patterns, previously generated content, and variables in later suggestions.
 
 An example Azure inventory is available in the [inventory](./inventory/) folder. It uses the [Azure Resource Manager inventory plugin](https://docs.ansible.com/ansible/latest/collections/azure/azcollection/azure_rm_inventory.html).
-
-![](../../../assets/img/lightspeed_provision_azure_vm.gif)
 
 ## Demo preparation if not running in Instruqt lab
 

@@ -12,7 +12,7 @@ The demo illustrates:
 
 ![](../../../assets/img/lightspeed_install_and_configure_cockpit.gif)
 
-## Demo preparation
+## Demo preparation if not using Instruqt environment
 
 1. Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../docs/getting_started.md).
 2. If not running this example in the Ansible self-paced labs environment, create an Ansible Inventory file with a `rhel` Ansible inventory group with the corresponding Linux target host(s) details.

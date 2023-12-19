@@ -17,7 +17,7 @@ This demo illustrates the following Ansible Lightspeed features:
 - Using keywords, such us `....using X var`, in prompts to obtain desired suggestions.
 - Using the full YAML file context to generate Ansible content with best practices.
 
-## Demo preparation
+## Demo preparation if not using Instruqt environment
 
 1. Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../getting_started.md).
 2. If not running this example in the Ansible self-paced labs environment, create an Ansible Inventory file with `rhel` Ansible inventory group with the corresponding Linux target host(s) details.

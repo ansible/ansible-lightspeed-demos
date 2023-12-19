@@ -15,7 +15,7 @@ Tested Ansible content starts with the `solution_*.yml` prefix. For example, `so
 
 This demo provisions an AWS EC2 instance using pre-existing variables.
 
-## Demo preparation
+## Demo preparation if not using Instruqt environment
 
 1. Configure your AWS credential environment variables as outlined in the [Ansible AWS guide](https://docs.ansible.com/ansible/latest/collections/amazon/aws/docsite/guide_aws.html#authentication).
 2. Run the [./prepare_ec2_environment.yml](./prepare_ec2_environment.yml) Playbook to create the required AWS demo resources before running the `demo_provision_aws_instance.yml` Playbook.

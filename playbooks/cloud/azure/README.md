@@ -1,4 +1,4 @@
-# Provision Azure resources and virtual machine
+# Provision Azure virtual machine
 
 ![](../../../assets/img/lightspeed_provision_azure_vm.gif)
 

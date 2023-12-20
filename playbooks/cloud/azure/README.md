@@ -1,5 +1,7 @@
 # Provision Azure resources and virtual machine
 
+![](../../../assets/img/lightspeed_provision_azure_vm.gif)
+
 ## Configure and activate Ansible Lightspeed
 
 Install the VS Code extension and activate Ansible Lightspeed using resources in the [getting started guide](../../../getting_started.md).
@@ -17,9 +19,7 @@ This demo is more advanced as it has several tasks and requires manual changes t
 
 An example Azure inventory is available in the [inventory](./inventory/) folder. It uses the [Azure Resource Manager inventory plugin](https://docs.ansible.com/ansible/latest/collections/azure/azcollection/azure_rm_inventory.html).
 
-![](../../../assets/img/lightspeed_provision_azure_vm.gif)
-
-## Demo preparation
+## Demo preparation if not running in Instruqt lab
 
 1. Use environment variables to configure your Azure credentials as outlined in the [Ansible Microsoft Azure guide](https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html#using-environment-variables).
 2. Run the [./prepare_azure_environment.yml](./prepare_azure_environment.yml) Playbook to create the required Azure demo resources before running the `demo_provision_azure_vm.yml` Playbook.
@@ -45,17 +45,9 @@ Run the steps below in the initial [./playbooks/cloud/azure/demo_provision_azure
 
 ### Step 1
 
-#### Uncomment and generate the first task `- name: Create a Standard_A1_v2 RHEL 8 VM called vm-lightspeed`
-
-- Suggestion used the Playbook name, `Create Azure VM`, to know the suggestion should use the `azure.azcollection` Content Collection.
-- Used natural language prompt to generate syntactically correct Ansible Playbook task.
-- Suggestion incorporated Ansible best practices and used Fully Qualified Collection Name (FQCN).
-- Used `...Standard_A1_v2 RHEL 8 VM called vm-lightspeed...` in the task description to correctly fill in the module arguments.
-
-### Step 2
-
 #### Remove the previous task and generate a new task with  `- name: Create a VM called vm-lightspeed using vm_config var`
 
+- Suggestion used the Playbook name, `Create Azure VM`, to know the suggestion should use the `azure.azcollection` Content Collection.
 - Ansible Lightspeed used the updated natural language prompt and integrated the `vm_config` variable in the suggestion.
 
 ---

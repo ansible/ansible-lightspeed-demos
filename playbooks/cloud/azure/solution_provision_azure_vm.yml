@@ -22,18 +22,16 @@
       admin_username: rhel
 
   tasks:
-        # # 1. Uncomment this task description.
-    # - name: Create a Standard_A1_v2 RHEL 8 VM called vm-lightspeed
-        # # 2. Remove previous task description and suggestion and uncomment the "vars:" section.
-        # # 3. Generate a new task using the below task description.
+        # # 1a. Uncomment the single-task prompt
+        # #     Note - The suggestion used the Fully Qualified Collection Name (FQCN)
+        # #     Note - The suggestion integrated the "vm_config" var as requested in the prompt.
     - name: Create a VM called vm-lightspeed using vm_config var
       azure.azcollection.azure_rm_virtualmachine:
         resource_group: "{{ vm_config.resource_group }}"
         name: vm-lightspeed
+        vm_size: "{{ vm_config.vm_size }}"
         admin_username: "{{ vm_config.admin_username }}"
         ssh_password_enabled: "{{ vm_config.ssh_password_enabled }}"
         ssh_public_keys: "{{ vm_config.ssh_public_keys }}"
-        vm_size: "{{ vm_config.vm_size }}"
         image: "{{ vm_config.image }}"
         network_interfaces: "{{ vm_config.network_interfaces }}"
-      register: vm_output

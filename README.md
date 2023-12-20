@@ -2,16 +2,20 @@
 
 Compilation of Ansible Lightspeed demo content and examples.
 
+## How do I get started with Ansible Lightspeed?
+
+Please follow the instructions provided by the resources available in the [getting started guide](./docs/getting_started.md).
+
 ## Ansible Lightspeed demo list
 
 Please refer to the `README.md` for each demo in the corresponding demo root folder for detailed demo instructions.
 
-| **Domain**         | **Name**                                                                                                       | **Status** |
-|--------------------|----------------------------------------------------------------------------------------------------------------|------------|
-| **Infrastructure** | [Install and configure postgresql and pgadmin4 podman container](./playbooks/infra/install_pgsql_and_pgadmin/) | Working    |
-|                    | [Install and configure Cockpit](./playbooks/infra/install_cockpit/README.md)                                   | Working    |
-| **Cloud**          | [Provision an AWS EC2 instance](./playbooks/cloud/aws/README.md)                                               | Working    |
-|                    | [Provision Azure resources and VM](./playbooks/cloud/azure/README.md)                                          | Working    |
+| **Domain**         | **Name**                                                                                                                    | **Status**  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------|
+| **Infrastructure** | [Install and configure postgresql and pgadmin4 podman container](./playbooks/infra/install_pgsql_and_pgadmin/README.md)     | Working     |
+|                    | [Install and configure Cockpit](./playbooks/infra/install_cockpit/README.md)                                                | Working     |
+| **Cloud**          | [Provision an AWS EC2 instance](./playbooks/cloud/aws/README.md)                                                            | Working     |
+|                    | [Provision Azure resources and VM](./playbooks/cloud/azure/README.md)                                                       | Working     |
 
 ## Demo content folder structure
 
@@ -34,10 +38,6 @@ The repository folder structure is as follows.
 | `prepare_<playbook_name>.yml`  | Playbooks that start with `prepare_*` prepares the environment for the demo.                                                                                                                                           |[prepare_aws_environment.yml](./playbooks/cloud/aws/prepare_aws_environment.yml) located in the _cloud/aws_ folder.     |
 | `README.md`                    | Contains a GIF and step-by-step instructions to prepare and perform the demo.                                                                                                                                          | [README.md](./playbooks/cloud/aws/README.md) for AWS EC2 demo.                                       |
 | `solution_<playbook_name>.yml` | Playbooks that start with  `solution_*` have the tested, desired suggestion outputs. Use the tested Ansible content to compare your Ansible Lightspeed-generated outputs before the demo. | [solution_aws_environment.yml](./playbooks/cloud/aws/solution_provision_ec2_instance.yml) located in the _cloud/aws_ folder.    |
-
-## How do I get started with Ansible Lightspeed?
-
-Please follow the instructions provided by the resources available in the [getting started guide](./docs/getting_started.md).
 
 ## ❗️Test before doing a demo if you're using this content locally
 

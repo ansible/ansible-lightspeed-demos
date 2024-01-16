@@ -95,7 +95,7 @@ Install postgresql
 
 - Click on the **Commit** button.
 ![lightspeed-pgsql-source4.png](../../../assets/img/lightspeed-pgsql-source4.png)
-- Click on the **Sync Changes** button to push the Playbook to the repo.
+- Click on the **Sync Changes** button to push the Playbook to the repo.  
 ![git_sync.png](../../../assets/img/git_sync.png)
 
 #### Run the `Deploy PostgreSQL and PG Admin` Job template

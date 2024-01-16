@@ -12,10 +12,10 @@ The demo performs the following tasks:
 
 This demo illustrates the following Ansible Lightspeed features:
 
-- Single and multi-line prompts.
-- Translating easy-to-understand prompts into Ansible content.
-- Using keywords, such us `....using X var`, in prompts to obtain desired suggestions.
-- Using the full YAML file context to generate Ansible content with best practices.
+* Single and multi-line prompts.
+* Translating easy-to-understand prompts into Ansible content.
+* Using keywords, such us `....using X var`, in prompts to obtain desired suggestions.
+* Using the full YAML file context to generate Ansible content with best practices.
 
 ## Demo preparation if not using Instruqt environment
 
@@ -48,7 +48,7 @@ Run the steps below in the [./playbooks/infra/install_pgsql_and_pgadmin//demo_in
 
 ### Step 1
 
-#### Uncomment and generate task `- name: Install postgresql server package`
+#### Uncomment and generate task `* name: Install postgresql server package`
 
 - Used natural language prompt to generate syntactically correct Ansible Playbook task.
 - Suggestion incorporated Ansible best practices and used Fully Qualified Collection Name (FQCN).
@@ -66,5 +66,72 @@ Run the steps below in the [./playbooks/infra/install_pgsql_and_pgadmin//demo_in
 #### Uncomment and generate task `- name: Create podman container using pgadmin_container var`
 
 - Ansible Lightspeed integrated the `pgadmin_container` variable into the suggestions as requested in the prompt.
+
+## Executing the Playbook
+
+You can choose to run the `demo_install_pgsql_pgadmin.yml` Playbook using **Ansible automation controller** (formerly Ansible Tower) or  `ansible-navigator`.
+
+> [!WARNING]
+> The automation controller instructions are specific to the pre-configured Instruqt environment.
+
+### **Option 1: Using automation controller - Instruqt only!**
+
+> [!NOTE]
+>The lab repository is hosted locally in the lab and no content is pushed to your GitHub account.
+
+#### Commit and push Playbook to repository
+
+- In Visual Studio Code, click on the **Source Control** icon.
+![lightspeed-pgsql-source1.png](../../../assets/img/lightspeed-pgsql-source1.png)
+- Click on the **plus** icon next to the Playbook name.
+![lightspeed-pgsql-source2.png](../../../assets/img/lightspeed-pgsql-source2.png)
+- Add a commit message. For example:
+
+```yaml
+Install postgresql
+```
+
+![lightspeed-pgsql-source3.png](../../../assets/img/lightspeed-pgsql-source3.png)
+
+- Click on the **Commit** button.
+![lightspeed-pgsql-source4.png](../../../assets/img/lightspeed-pgsql-source4.png)
+- Click on the **Sync Changes** button to push the Playbook to the repo.
+![git_sync.png](../../../assets/img/git_sync.png)
+
+#### Run the `Deploy PostgreSQL and PG Admin` Job template
+
+- Go to the **Controller** tab and login using the credentials provided above if necessary.
+- Click **Templates** under the **Resources** section in the Navigation Pane on the left hand side.
+![lightspeed-pgsql-controller-templates.png](../../../assets/img/lightspeed-pgsql-controller-templates.png)
+- Click the <img src="https://github.com/IPvSean/pictures_for_github/blob/master/launch_job.png?raw=true" style="width:4%; display:inline-block; vertical-align: middle;" /> icon on the right-hand side of the `Deploy PostgreSQL and PG Admin` Job Template column.
+![lightspeed-pgsql-controller-template-run.png](../../../assets/img/lightspeed-pgsql-controller-template-run.png)
+- Give it a few moments for the job to complete and note the `Deploy PostgreSQL and PG Admin` Job completed successfully!
+![lightspeed-pgsql-controller-template-job.png](../../../assets/img/lightspeed-pgsql-controller-template-job.png)
+
+### **Option 2: using ansible-navigator**
+
+- Open a terminal in VS Code by clicking on `Terminal` and `New Terminal`.
+
+```bash
+cd playbooks/infra/install_pgsql_and_pgadmin
+```
+
+- Run the ansible-navigator command in the terminal
+
+```bash
+ansible-navigator run demo_install_pgsql_pgadmin.yml
+```
+
+- Press the `ESC` key to return to the prompt.
+
+### Verify PG Admin is available
+
+- Open the **PG Admin** tab on the top
+- If the `demo_install_pgsql_pgadmin.yml` Playbook completed successfully, you should see the user interface in the tab.
+![lightspeed-pgsql-pgadmin-check.png](../../../assets/img/lightspeed-pgsql-pgadmin-check.png)
+
+> [!NOTE]
+> If necessary, click on the refresh button to reload the **PG Admin** tab to display the UI.
+>![instruqt_refresh_window.png](../../../assets/img/instruqt_refresh_window.png)
 
 ---

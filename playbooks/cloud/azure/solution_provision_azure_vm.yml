@@ -22,7 +22,9 @@
       admin_username: rhel
 
   tasks:
-        # # 1a. Uncomment the single-task prompt
+        # # 1a. Uncomment task description below and Press "ENTER" at the end to generate a single task suggestion.
+        # #     Note - Uncomment using "Ctrl + /" or remove hash(#) from the front, please make sure task level
+        # #            indentation is maintained.
         # #     Note - The suggestion used the Fully Qualified Collection Name (FQCN)
         # #     Note - The suggestion integrated the "vm_config" var as requested in the prompt.
     - name: Create a VM called vm-lightspeed using vm_config var

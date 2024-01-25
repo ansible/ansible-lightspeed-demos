@@ -22,7 +22,7 @@
 
   tasks:
 ############################################## INSTRUCTIONS TASK 1 and 2 ##############################################
-# Press "ENTER" at the end of the multi-task prompt line 32. DO NOT UNCOMMENT THIS LINE.
+# Press "ENTER" at the end of the multi-task prompt line 32. DO NOT UNCOMMENT LINE 32.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used the Fully Qualified Collection Name (FQCN).
 # Note - The first task used the correct AWS tag "tag:Name" in the filter.
@@ -40,7 +40,7 @@
     #- name: Provision t3.small instance using ec2_instance var
 
 ############################################## INSTRUCTIONS TASK 4 and 5 ##############################################
-# Press "ENTER" at the end of the multi-task prompt line 51. DO NOT UNCOMMENT THIS LINE.
+# Press "ENTER" at the end of the multi-task prompt line 51. DO NOT UNCOMMENT LINE 51.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used the correct variable from the previous task.
 # Note - The second task used the "public_ip_address" variable based on the previous task.

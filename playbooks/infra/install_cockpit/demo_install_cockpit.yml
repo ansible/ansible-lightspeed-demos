@@ -2,31 +2,32 @@
 - name: Install and configure Cockpit
   hosts: rhel
   become: true
-
   tasks:
-        # TASK 1
-        # # 1a. Uncomment task description below and Press "ENTER" at the end to generate a single task suggestion.
-        # #     Note - Uncomment using "Ctrl + /" or remove hash(#) from the front, please make sure task level
-        # #            indentation is maintained.
-        # #     Note - The suggestion included Ansible best practices by using Fully Qualified Collection name (FQCN).
-        # #     Note - The suggestion used the Certified Content Collection specified in the prompt.
+################################################# INSTRUCTIONS TASK 1 #################################################
+# Uncomment task description on line 13 and Press "ENTER" at the end.
+# Press "TAB" to accept suggestion.
+# Note - The suggestion included Ansible best practices by using Fully Qualified Collection name (FQCN).
+# Note - The suggestion used the Certified Content Collection specified in the prompt.
+#######################################################################################################################
 
-    # - name: Install cockpit using redhat.rhel_system_roles collection
+    #- name: Install cockpit using redhat.rhel_system_roles collection
 
-        # TASK 2
-        # # 2a. Uncomment task description below and Press "ENTER" at the end to generate a single task suggestion.
-        # #     Note - Uncomment using "Ctrl + /" or remove hash(#) from the front, please make sure task level
-        # #            indentation is maintained.
-        # #     Note - Ansible Lightspeed used "ansible.builtin.template" module based on the ".j2" file extension.
-        # #     Note - The suggestion set the file permissions ("0644"), owner, and group based on Ansible best practices.
+################################################# INSTRUCTIONS TASK 2 #################################################
+# Uncomment task description on line 22 and Press "ENTER" at the end.
+# Press "TAB" to accept suggestion.
+# Note - Ansible Lightspeed used "ansible.builtin.template" module based on the ".j2" file extension.
+# Note - The suggestion set the file permissions ("0644"), owner, and group based on Ansible best practices.
+#######################################################################################################################
 
-    # - name: Copy cockpit.conf.j2 to /etc/cockpit
+    #- name: Copy cockpit.conf.j2 to /etc/cockpit
 
-        # TASK 3
-        # # 3a. Press "ENTER" at the end of the multi-task prompt line. DO NOT UNCOMMENT THIS LINE.
-        # #     First task note - Ansible Lightspeed used the generic "Restart and enable service" prompt
-        # #            and full Playbook context to infer the recommendation should restart the "cockpit" service.
-        # #     Second task note -Ansible Lightspeed used the generic language prompt and Playbook context
-        # #            and used the correct default Cockpit service port (9090) in the suggestion.
+############################################## INSTRUCTIONS TASK 3 and 4 ##############################################
+# Press "ENTER" at the end of the multi-task prompt line 33. DO NOT UNCOMMENT THIS LINE.
+# Press "TAB" to accept suggestion.
+# First task note - Ansible Lightspeed used the generic "Restart and enable service" prompt
+# and full Playbook context to infer the recommendation should restart the "cockpit" service.
+# Second task note -Ansible Lightspeed used the generic language prompt and Playbook context
+# and used the correct default Cockpit service port (9090) in the suggestion.
+#######################################################################################################################
 
     # Restart and enable service & wait 15 seconds for it to be available

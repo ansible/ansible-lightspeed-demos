@@ -22,7 +22,7 @@
 
   tasks:
 ############################################## INSTRUCTIONS TASK 1 and 2 ##############################################
-# Press "ENTER" at the end of the multi-task prompt line 32. DO NOT UNCOMMENT LINE 32.
+# Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used the Fully Qualified Collection Name (FQCN).
 # Note - The first task used the correct AWS tag "tag:Name" in the filter.
@@ -41,7 +41,7 @@
         vpc_subnet_id: "{{ subnet_info.subnets[0].id }}"
 
 ################################################# INSTRUCTIONS TASK 3 #################################################
-# Uncomment task description on line 40 and Press "ENTER" at the end.
+# Uncomment the line just after this instructions block and Press "ENTER" at the end.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used the "ec2_instance" variable declared in the "vars:" section.
 #######################################################################################################################
@@ -60,7 +60,7 @@
       register: ec2_instance_info
 
 ############################################## INSTRUCTIONS TASK 4 and 5 ##############################################
-# Press "ENTER" at the end of the multi-task prompt line 51. DO NOT UNCOMMENT LINE 51.
+# Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used the correct variable from the previous task.
 # Note - The second task used the "public_ip_address" variable based on the previous task.

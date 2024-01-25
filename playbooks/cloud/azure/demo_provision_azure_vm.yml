@@ -23,7 +23,7 @@
 
   tasks:
 ################################################# INSTRUCTIONS TASK 1 #################################################
-# Uncomment task description on line 32 and Press "ENTER" at the end.
+# Uncomment the line just after this instructions block and Press "ENTER" at the end.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion used used Playbook name, `Create Azure VM`, to infer the correct `azure.azcollection` collection.
 # Note - The suggestion used the Fully Qualified Collection Name (FQCN).

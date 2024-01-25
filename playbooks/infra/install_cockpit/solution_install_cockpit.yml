@@ -5,7 +5,7 @@
 
   tasks:
 ################################################# INSTRUCTIONS TASK 1 #################################################
-# Uncomment task description on line 13 and Press "ENTER" at the end.
+# Uncomment the line just after this instructions block and Press "ENTER" at the end.
 # Press "TAB" to accept suggestion.
 # Note - The suggestion included Ansible best practices by using Fully Qualified Collection name (FQCN).
 # Note - The suggestion used the Certified Content Collection specified in the prompt.
@@ -16,7 +16,7 @@
         name: redhat.rhel_system_roles.cockpit
 
 ################################################# INSTRUCTIONS TASK 2 #################################################
-# Uncomment task description on line 22 and Press "ENTER" at the end.
+# Uncomment the line just after this instructions block and Press "ENTER" at the end.
 # Press "TAB" to accept suggestion.
 # Note - Ansible Lightspeed used "ansible.builtin.template" module based on the ".j2" file extension.
 # Note - The suggestion set the file permissions ("0644"), owner, and group based on Ansible best practices.
@@ -31,7 +31,7 @@
         mode: '0644'
 
 ############################################## INSTRUCTIONS TASK 3 and 4 ##############################################
-# Press "ENTER" at the end of the multi-task prompt line 33. DO NOT UNCOMMENT THIS LINE.
+# Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
 # Press "TAB" to accept suggestion.
 # First task note - Ansible Lightspeed used the generic "Restart and enable service" prompt
 # and full Playbook context to infer the recommendation should restart the "cockpit" service.

@@ -6,6 +6,12 @@ Compilation of Ansible Lightspeed demo content and examples.
 
 Please follow the instructions provided by the resources available in the [getting started guide](./docs/getting_started.md).
 
+## How to enable Ansible Lightspeed in VSCode?
+
+Please follow the instruction provided using the screenshots below
+
+<img src="assets/img/extension_settings.png" width="400" height="400"> <img src="assets/img/workspace.png" width="600" height="400"> <img src="assets/img/lightspeed_settings.png" width="600" height="400"> <img src="assets/img/lightspeed_login.png" width="400" height="400">
+
 ## Ansible Lightspeed demo list
 
 Please refer to the `README.md` for each demo in the corresponding demo root folder for detailed demo instructions.

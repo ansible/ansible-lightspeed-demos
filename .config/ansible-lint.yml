@@ -1,4 +1,0 @@
----
-profile: production
-skip_list:
-  - yaml[comments]

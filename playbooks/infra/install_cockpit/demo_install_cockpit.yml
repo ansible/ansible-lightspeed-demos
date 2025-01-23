@@ -10,7 +10,7 @@
 # Note - The suggestion used the Certified Content Collection specified in the prompt.
 #######################################################################################################################
 
-    #- name: Install cockpit using redhat.rhel_system_roles collection
+    #- name: Install cockpit using redhat.rhel_system_roles package
 
 ################################################# INSTRUCTIONS TASK 2 #################################################
 # Uncomment the line just after this instructions block and Press "ENTER" at the end.
